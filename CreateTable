@@ -9,3 +9,15 @@ create external table if not exists AdventureWorks2014.Department
 )   
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' lines terminated by '\n'
 STORED AS TEXTFILE LOCATION 'wasb:///ds/Department' TBLPROPERTIES('skip.header.line.count'='1');
+
+==================================================================================================
+
+
+Reading CSV file:-
+==================
+create table tableName (column1 datatype, column2 datatype , column3 datatype , column4 datatype)
+ROW FORMAT SERDE 
+'org.apache.hadoop.hive.serde2.OpenCSVSerde' 
+STORED AS TEXTFILE ;
+
+==================================================================================================
