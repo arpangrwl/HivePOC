@@ -1,0 +1,11 @@
+
+create external table if not exists AdventureWorks2014.Department
+( 
+    DepartmentID smallint , 
+    Name string ,
+    GroupName string, 
+    rate_code string, 
+    ModifiedDate timestamp 
+)   
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' lines terminated by '\n'
+STORED AS TEXTFILE LOCATION 'wasb:///ds/Department' TBLPROPERTIES('skip.header.line.count'='1');
